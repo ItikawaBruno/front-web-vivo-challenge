@@ -1,0 +1,114 @@
+/* ListStatus.css */
+.container {
+  background-color: #ffffff;
+  flex: 1;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.title {
+  color: #993399;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.subTitle {
+  margin-left: 50px;
+  margin-top: 25px;
+  color: #993399;
+  font-size: 17px;
+}
+
+.taskCardPendente {
+  background-color: #a34da3ff;
+  padding: 15px;
+  width: 70%;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+  color: #f0f0f0;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.taskCardFeito {
+  background-color: #5f125fff;
+  padding: 15px;
+  width: 70%;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f0f0f0;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.btn-finalizar{
+  background-color: #993399;
+  color: #f0f0f0;
+  font-weight: 600;
+  padding: 10px;
+  width: 20%;
+  border: none;
+  border-radius: 10px;
+  align-self: center;
+  cursor:pointer;
+}
+
+/* NOVOS ESTILOS PARA O CARD DE DETALHES */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: #993399;
+}
+
+.modalCard {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

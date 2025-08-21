@@ -1,0 +1,78 @@
+/* Dashboard.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+}
+
+.scroll-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: start;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: auto;
+}
+
+.title {
+  color: #993399;
+  font-weight: 700;
+  margin-left: 20px;
+  line-height: 1.2;
+}
+
+.box-dashboard {
+  background-color: #c96fc9ff;
+  margin-top: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.charts-container{
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    justify-content: space-evenly;
+}
+
+.tot{
+  display: flex;
+  text-align: center;
+}
+
+.num{
+  text-align: center;
+  font-size: 100px;
+  font-weight:700 ;
+  color: #6b246b;
+}
