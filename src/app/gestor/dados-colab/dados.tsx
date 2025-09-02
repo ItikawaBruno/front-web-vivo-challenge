@@ -90,7 +90,7 @@ export default function DadosColaborador() {
 
   return (
     <div className="dados-container">
-      <button onClick={() => navigate("/gestor/menu")} className="back-button">
+      <button onClick={() => navigate("/gestor/menu")} className="back-click">
         <MdArrowBack size={24} />
       </button>
 

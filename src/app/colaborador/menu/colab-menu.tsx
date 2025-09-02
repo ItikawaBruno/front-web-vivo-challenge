@@ -12,7 +12,7 @@ export default function Menu() {
   const [menuAberto, setMenuAberto] = useState(false);
   const navigate = useNavigate();
 
-  const menuWidth = menuAberto ? 80 : 35;
+  const menuWidth = menuAberto ? 120 : 35;
 
   async function desativarConta() {
     const token = localStorage.getItem("token"); 
@@ -57,7 +57,7 @@ export default function Menu() {
   ];
 
   return (
-    <div style={{ display: 'flex', height: '100vh', backgroundColor: 'white' }}>
+    <div style={{ display: 'flex', height: '100vh', backgroundColor: 'white'}}>
       <div style={{
         width: menuWidth,
         transition: 'width 0.3s',
@@ -66,25 +66,78 @@ export default function Menu() {
         flexDirection: 'column',
         alignItems: 'center',
         paddingTop: 50,
+        borderRadius:'10px',
+        height:'90%',
+        marginTop: 'auto',
+        marginBottom:'auto',
+        marginLeft:'10px',
+        padding:'5px',
+        textAlign:'center'
       }}>
-        <button onClick={() => setMenuAberto(!menuAberto)} style={buttonStyle}>
+        <button onClick={() => setMenuAberto(!menuAberto)} style={{  padding:'10px',
+  borderRadius: 8,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: 'none',
+  border: 'none',
+  cursor: 'pointer',
+  color:'white',
+  backgroundColor:'#682568',
+  width:'100%',
+  gap:'10px',
+  textAlign:'start'}}>
           <MdMenu style={{ color: 'white' }} size="24" />
         </button>
         {menuAberto && (
           <>
-            <button style={buttonStyle} onClick={() => navigate('./chat')}>
+            <button style={buttonStyle} onClick={() => navigate('./chat')} onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#c950c9';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = 'white';
+            e.currentTarget.style.backgroundColor='#993399'
+          }}>
               <MdChat style={{ color: 'white' }} size="24" />
+              <p>Chat</p>
             </button>
-            <button style={buttonStyle} onClick={() => navigate('./list-status')}>
+            <button style={buttonStyle} onClick={() => navigate('./list-status')}  onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#c950c9';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = 'white';
+            e.currentTarget.style.backgroundColor='#993399'
+          }}>
               <MdList style={{ color: 'white' }} size="24" />
+              <p>Tarefas</p>
             </button>
-            <button style={buttonStyle} onClick={() => navigate('./dashboard')}>
+            <button style={buttonStyle} onClick={() => navigate('./dashboard')}  onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#c950c9';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = 'white';
+            e.currentTarget.style.backgroundColor='#993399'
+          }}>
               <MdBarChart style={{ color: 'white' }} size="24" />
+              <p>Dashboard</p>
             </button>
-            <button style={buttonStyle} onClick={confirmaLogOut}>
+            <button style={buttonStyle} onClick={confirmaLogOut}  onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#c950c9';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = 'white';
+            e.currentTarget.style.backgroundColor='#993399'
+          }}>
               <MdLogout style={{ color: 'white' }} size="24" />
+              <p>Sair</p>
             </button>
-            <button style={buttonStyle} onClick={desativarConta}>
+            <button style={buttonStyle} onClick={desativarConta}  onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#c950c9';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = 'white';
+            e.currentTarget.style.backgroundColor='#993399'
+          }}>
               <MdPersonRemove style={{ color: 'white' }} size="24" />
             </button>
           </>
@@ -110,13 +163,17 @@ export default function Menu() {
 }
 
 const buttonStyle: React.CSSProperties = {
-  padding: 15,
-  marginBottom: 15,
+  padding:'10px',
   borderRadius: 8,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'between',
   background: 'none',
   border: 'none',
   cursor: 'pointer',
+  color:'white',
+  backgroundColor:'#993399',
+  width:'100%',
+  gap:'10px',
+  textAlign:'start'
 };
